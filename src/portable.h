@@ -49,6 +49,18 @@ int mkdir (char *);
 int mkdir (char *);
 #endif
 
+#ifdef   MINGW32
+/* options for zooopen(), zoocreate() */
+#define  Z_WRITE        "r+b"
+#define  Z_READ         "rb"
+#define  Z_RDWR         "r+b"
+#define	 Z_NEW		"w+b"
+#define	 zgetc(x)	getc(x)
+#define  zputc(c, f)	putc(c, f)
+#define	 zputchar(c)	putchar(c)
+#define  MKDIR(x)       mkdir(x)
+#endif
+
 #ifdef VMS
 #define  Z_WRITE	"r+"
 #define  Z_READ		"r"

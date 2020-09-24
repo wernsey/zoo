@@ -38,6 +38,10 @@ case $host in
     MACHINE=-DBSD4_3
     SYS=-DSYS_IS_UNIX
     ;;
+  *-mingw32*)
+    MACHINE=-DMINGW32
+    SYS=-DSYS_IS_GENERIC
+    ;;
   *)
     AC_MSG_WARN(Your operating system is not officially supported yet by zoo.)
     AC_MSG_WARN(Set MACHINE=foo manually to one of: ULTRIX, SYS_V, or GENERIC)

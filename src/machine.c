@@ -70,6 +70,10 @@ unsigned count;
 #include "ERROR -- NOT SUPPORTED"
 #endif
 
+#ifdef MINGW32
+#include "generic.c"
+#endif
+
 #ifdef TURBOC
 #ifdef PORTABLE
 #include "generic.c"

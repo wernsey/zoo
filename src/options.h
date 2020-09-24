@@ -288,6 +288,21 @@ own.
 #define NEED_MEMMOVE
 #endif /* GENERIC */
 
+#ifdef MINGW32
+#define FNLIMIT 14
+#define NEEDCTYP
+#define CUR_DIR "."
+#define PATH_SEP "/"
+#define EXT_SEP  "/."
+#define CHEKDIR
+#define T_SIGNAL	void
+#define T_UINT16	unsigned short		/* must be 16 bit unsigned */
+#define STDARG
+#define PORTABLE
+#define FOLD
+#define VOIDPTR  void *
+#define NIXTIME
+#endif /* MINGW32 */
 
 /***********************************************************************/
 /* REST OF THIS FILE SHOULD NOT NEED ANY CHANGES                       */

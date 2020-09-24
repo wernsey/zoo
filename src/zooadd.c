@@ -339,7 +339,7 @@ char *option;				 /* option string */
 		if (z_fmt) {
 			ssize_t len;
 
-			len = zooread(this_file, &tiny_header, sizeof(tiny_header));
+			len = zooread(this_file, (char*)&tiny_header, sizeof(tiny_header));
 			if (tiny_header.tinytag == TINYTAG && tiny_header.type == 1 &&
 			    len == sizeof(tiny_header) && strlen(tiny_header.fname) <= FNAMESIZE)
 			/* ok */ ;

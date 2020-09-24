@@ -137,7 +137,7 @@ unsigned int size;
 		ptr = realloc(arr, (num + 1) * sizeof(char *));
 		if (!ptr)
 			prterror('f', no_memory);
-		arr = ptr;
+		arr = (VOIDPTR)ptr;
 		arr[num++] = (VOIDPTR)memptr;
 	}
 
